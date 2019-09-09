@@ -18,7 +18,8 @@ polyfills, transpiling JSX)? **Yes**
 ``` 
 vue add vuetify
 ```
-Select Configure (advanced):
+Select Configure (advanced) (do not use pre-made template, select defaults for
+everything else):
 - Use a pre-made template? (will replace App.vue and HelloWorld.vue) **No**
 - Use custom theme? **No**
 - Use custom properties (CSS variables)? **No**
