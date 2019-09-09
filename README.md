@@ -65,6 +65,9 @@ Trigger hot reload
 
 Check the padding again 
 
+There is another file AppVue.vue provided which includes the same code but properly
+hot reloads
+
 ## Project setup
 ```
 npm install

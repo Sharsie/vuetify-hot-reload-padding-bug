@@ -1,25 +1,21 @@
-import { Component, Vue } from 'vue-property-decorator';
+import Vue from 'vue';
 import { VApp, VAppBar, VContent } from 'vuetify/lib';
 
-@Component({
-  components: {
-    VApp,
-    VAppBar,
-    VContent,
-  },
-})
-export default class App extends Vue {
-  public render() {
-    return (
-        <v-app id='app'>
-          <v-app-bar app>
-            Padding bug
-          </v-app-bar>
-          <v-content>
-            Content
-          </v-content>
-        </v-app>
-    );
-  }
-}
-
+export default Vue.extend({
+    name: 'App',
+    components: {
+        VApp,
+        VAppBar,
+        VContent,
+    },
+    render: (createElement) => {
+        return createElement('v-app', [
+           createElement('v-app-bar', {
+               props: {
+                   app: true,
+               },
+           }, 'Padding bug .tsx'),
+           createElement('v-content', 'Test'),
+        ]);
+    },
+});
